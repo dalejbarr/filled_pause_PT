@@ -1,0 +1,274 @@
+---
+title: "Filled Pause Perspective-Taking Study (Barr & Seyfeddinipur, 2010)"
+output:
+  github_document
+---
+
+# Description
+
+This repository contains data files, stimulus materials, and scripts associated with the following psycholinguistic study.
+
+Barr, D. J., & Seyfeddinipur, M. (2010). [The role of fillers in listener attributions for speaker disfluency.](https://doi.org/10.1080/01690960903047122) *Language and Cognitive Processes*, *25*, 441--455.
+
+- `data_raw/` : raw data files in CSV format
+- `stimuli/` : stimulus files (Windows BMP image files and WAV audio files)
+
+# Codebook for files in `data_raw/`
+
+This section provides [R code](https://www.r-project.org) for importing the raw data files as well as descriptions of the fields within each resulting table. To use the code, load the [tidyverse](https://tidyverse.org) package for R.
+
+```{r setup, echo = TRUE, message = FALSE}
+library("tidyverse")
+```
+
+## Files related to study design
+
+### `areas_of_interest.csv`
+
+Contains the coordinates for the two screen regions (areas of interest, or AOIs) where pictures were displayed. Each picture was a 400x400 bitmap image, displayed on a computer screen with a 1024x768 resolution.
+
+```{r aoi-read, echo = TRUE}
+aoi <- read_csv(file.path("data_raw", "areas_of_interest.csv"),
+                col_types = "ciiii")
+```
+
+```{r aoi-tbl, echo = FALSE}
+tribble(~field, ~description,
+        "AOI", "name of area of interest (left or right)",
+        "x1", "upper left X coordinate of image in pixels",
+        "y1", "upper left Y coordinate of image in pixels",
+        "x2", "bottom right X coordinate of image in pixels",
+        "y2", "bottom right Y coordinate of image in pixels") %>%
+  knitr::kable()
+```
+
+### `block_images.csv`
+
+Information about what images go with which blocks. Each block had three images, labelled A, B, C in the manuscript (see Barr & Seyfeddinipur, 2010, pp. 445--446).
+
+```{r bimages-read, echo = TRUE}
+block_images <- read_csv(file.path("data_raw", "block_images.csv"),
+                         col_types = "iic")
+```
+
+```{r bimages-tbl, echo = FALSE}
+tribble(~field, ~description,
+        "block", "unique integer identifying blocks",
+        "image", "bitmap image number (e.g., 52 = 52.bmp)",
+        "imgrole", "role the image plays (A, B, C)") %>%
+  knitr::kable()
+```
+
+### `blocks.csv`
+
+There were four versions of the stimulus materials created for counterbalancing purposes. This file has information about what condition each block was presented in across the four versions.
+
+```{r blocks-read, echo = TRUE}
+blocks <- read_csv(file.path("data_raw", "blocks.csv"),
+                   col_types = "iicccccc")
+```
+
+```{r blocks-tbl, echo = FALSE}
+tribble(~field, ~description,
+        "vers", "which version of the stimuli (1-4)",
+        "block", "unique integer identifying blocks",
+        "blocktype", "whether the block was critical or noncritical",
+        "trainspkr", "who the speaker was during training",
+        "testspkr", "who the speaker was at test",
+        "spkr", "what speaker condition the block was in (same, diff)",
+        "pause", "what pause condition the block was in (filled, baseline)",
+        "soundfile", "soundfile that played at test") %>%
+  knitr::kable()
+```
+
+### `versions.csv`
+
+Trial-by-trial information about training and test trials for each block and each version of the stimulus materials.
+
+```{r versions-read, echo = TRUE}
+versions <- read_csv(file.path("data_raw", "versions.csv"),
+                     col_types = "iiiiiicci")
+```
+
+```{r versions-tbl, echo = FALSE}
+tribble(~field, ~description,
+        "vers", "which version of stimulus materials (1, 2, 3, or 4)",
+        "block", "unique integer identifying each block",
+        "blocktrial", "integer identifying presentation order within the block",
+        "left", "image number in the left area of interest (e.g., 32 means 32.BMP)",
+        "right", "image number in the right area of interest",
+        "target", "position of the target (0 = left, 1 = right)",
+        "soundfile", "name of the wave file (e.g., 4 = 4.wav, 6umE = 6umE.wav)",
+        "who", "identify of the speaker",
+        "showspeaker", "display speaker identity before trial (0 = no, 1 = yes)")%>%
+  knitr::kable()
+```
+
+## Files related to subject data
+
+### `subjects.csv`
+
+Information about each subject in the experiment.
+
+```{r subjects-read, echo = TRUE}
+subjects <- read_csv(file.path("data_raw", "subjects.csv"),
+                     col_types = "ici")
+```
+
+```{r subjects-tbl, echo = FALSE}
+tribble(~field, ~description,
+        "SubjID", "unique integer identifying each subject",
+        "Gender", "gender of the subject",
+        "vers", "which version of the materials the subject received") %>%
+  knitr::kable()
+```
+
+### `trials.csv`
+
+Information about each trial in the experiment.
+
+```{r trials-read, echo = TRUE}
+trials <- read_csv(file.path("data_raw", "trials.csv"),
+                   col_types = "iiiiiii")
+```
+
+```{r trials-tbl, echo = FALSE}
+tribble(~field, ~description,
+        "TrialID", "integer uniquely identifying each collected trial",
+        "SubjID", "integer uniquely identifying each subject",
+        "block", "block number",
+        "btrial", "trial number within the block",
+        "tord", "trial order",
+        "RT", "response time in ms (from start of audio playback)",
+        "Selection", "which image was selected (0 = left, 1 = right)") %>%
+  knitr::kable()
+```
+
+### `mouse.csv`
+
+Information about the position of the mouse cursor on each trial on a display with 1024x768 resolution.
+
+```{r mouse-read, echo = TRUE}
+mouse <- read_csv(file.path("data_raw", "mouse.csv"),
+                  col_types = "iiii")
+```
+
+```{r mouse-tbl, echo = FALSE}
+tribble(~field, ~description,
+        "TrialID", "integer uniquely identifying each collected trial",
+        "Msec", "milliseconds from onset of soundfile",
+        "X", "horizontal position of mouse cursor",
+        "Y", "vertical position of mouse cursor") %>%
+  knitr::kable()
+```
+
+# Scripts
+
+## Data import and pre-processing
+
+```{r distance-score, echo = TRUE}
+library("lme4")
+library("tidyverse")
+
+## import the data
+subjects <- read_csv(file.path("data_raw", "subjects.csv"),
+                     col_types = "ici")
+
+blocks <- read_csv(file.path("data_raw", "blocks.csv"),
+                   col_types = "iicccccc")
+
+versions <- read_csv(file.path("data_raw", "versions.csv"),
+                     col_types = "iiiiiicci")
+
+trials <- read_csv(file.path("data_raw", "trials.csv"),
+                   col_types = "iiiiiii")
+
+mouse <- read_csv(file.path("data_raw", "mouse.csv"),
+                  col_types = "iiii")
+
+## audiotimings:
+##   onset of filler/noise: 3056 ms
+##   onset of noun phrase:  4871 ms
+fponset <- 3056L
+nponset <- 4871L
+
+## keep only the test trials
+crit <- trials %>%
+  filter(btrial == 5L) %>%
+  inner_join(subjects %>% select(-Gender), "SubjID") %>%
+  semi_join(blocks %>% filter(blocktype == "critical"), c("vers", "block")) %>%
+  inner_join(versions %>% select(vers, block, btrial, target),
+             c("vers", "block", "btrial")) %>%
+  mutate(fac = (target * 2L) - 1L,
+         accurate = Selection == target) %>%
+  filter(accurate)
+
+## time-lock and calculate distance of cursor from target
+mousedist <- mouse %>%
+  inner_join(crit %>% select(TrialID, fac), "TrialID") %>%
+  mutate(ms = Msec - fponset,
+         sdist = fac * (X - 512) / 100L,
+         x = if_else(abs(sdist) > 1, 1 * sign(sdist), sdist),
+         win = factor(if_else(ms >= (nponset - fponset),
+                              "expression", "filled interval"),
+                      levels = c("filled interval", "expression"))) %>%
+  filter(ms >= 0L, ms <= 4471L) %>%
+  select(TrialID, win, ms, x)
+
+## calculate distance travelled during window
+## and match up with block info
+dist <- mousedist %>%
+  group_by(TrialID, win) %>%
+  filter( (ms == min(ms)) | (ms == max(ms)) ) %>%
+  mutate(step = paste0("S", row_number())) %>%
+  select(-ms) %>%
+  pivot_wider(names_from = step, values_from = x) %>%
+  mutate(dist = S2 - S1) %>%
+  ungroup() %>%
+  inner_join(crit %>% select(SubjID, TrialID, vers, block), c("TrialID")) %>%
+  inner_join(blocks %>% select(vers, block, spkr, pause),
+             c("vers", "block")) %>%
+  select(SubjID, block, win, spkr, pause, dist)
+```
+
+## Calculate means
+
+```{r descriptives, echo = TRUE}
+descriptives <- dist %>%
+  group_by(win, spkr, pause) %>%
+  summarize(mean_dist = mean(dist),
+            sd_dist = sd(dist))
+```
+
+```{r desc-show, echo = FALSE}
+descriptives %>%
+  knitr::kable(digits = 2)
+```
+
+## Linear Mixed-Effects Model
+
+### Filled interval
+
+```{r lmer-fi, echo = TRUE}
+dat <- dist %>%
+  mutate(P = if_else(pause == "baseline", -.5, .5),
+         S = if_else(spkr == "diff", -.5, .5))
+
+mod_fi <- lmer(dist ~ S * P +
+                 (S * P || SubjID) +
+                 (S * P || block),
+               data = dat %>% filter(win == "filled interval"))
+
+summary(mod_fi)
+```
+
+### Referential expression
+
+```{r lmer-re, echo = TRUE}
+mod_re <- lmer(dist ~ S * P +
+                 (S * P || SubjID) +
+                 (S * P || block),
+               data = dat %>% filter(win == "expression"))
+
+summary(mod_re)
+```

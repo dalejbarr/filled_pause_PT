@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="text/css">
+@font-face {
+font-family: octicons-link;
+src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+body {
+-webkit-text-size-adjust: 100%;
+text-size-adjust: 100%;
+color: #333;
+font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+font-size: 16px;
+line-height: 1.6;
+word-wrap: break-word;
+}
+a {
+background-color: transparent;
+}
+a:active,
+a:hover {
+outline: 0;
+}
+strong {
+font-weight: bold;
+}
+h1 {
+font-size: 2em;
+margin: 0.67em 0;
+}
+img {
+border: 0;
+}
+hr {
+box-sizing: content-box;
+height: 0;
+}
+pre {
+overflow: auto;
+}
+code,
+kbd,
+pre {
+font-family: monospace, monospace;
+font-size: 1em;
+}
+input {
+color: inherit;
+font: inherit;
+margin: 0;
+}
+html input[disabled] {
+cursor: default;
+}
+input {
+line-height: normal;
+}
+input[type="checkbox"] {
+box-sizing: border-box;
+padding: 0;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+td,
+th {
+padding: 0;
+}
+* {
+box-sizing: border-box;
+}
+input {
+font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+a {
+color: #4078c0;
+text-decoration: none;
+}
+a:hover,
+a:active {
+text-decoration: underline;
+}
+hr {
+height: 0;
+margin: 15px 0;
+overflow: hidden;
+background: transparent;
+border: 0;
+border-bottom: 1px solid #ddd;
+}
+hr:before {
+display: table;
+content: "";
+}
+hr:after {
+display: table;
+clear: both;
+content: "";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 15px;
+margin-bottom: 15px;
+line-height: 1.1;
+}
+h1 {
+font-size: 30px;
+}
+h2 {
+font-size: 21px;
+}
+h3 {
+font-size: 16px;
+}
+h4 {
+font-size: 14px;
+}
+h5 {
+font-size: 12px;
+}
+h6 {
+font-size: 11px;
+}
+blockquote {
+margin: 0;
+}
+ul,
+ol {
+padding: 0;
+margin-top: 0;
+margin-bottom: 0;
+}
+ol ol,
+ul ol {
+list-style-type: lower-roman;
+}
+ul ul ol,
+ul ol ol,
+ol ul ol,
+ol ol ol {
+list-style-type: lower-alpha;
+}
+dd {
+margin-left: 0;
+}
+code {
+font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+font-size: 12px;
+}
+pre {
+margin-top: 0;
+margin-bottom: 0;
+font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+.select::-ms-expand {
+opacity: 0;
+}
+.octicon {
+font: normal normal normal 16px/1 octicons-link;
+display: inline-block;
+text-decoration: none;
+text-rendering: auto;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+.octicon-link:before {
+content: '\f05c';
+}
+.markdown-body:before {
+display: table;
+content: "";
+}
+.markdown-body:after {
+display: table;
+clear: both;
+content: "";
+}
+.markdown-body>*:first-child {
+margin-top: 0 !important;
+}
+.markdown-body>*:last-child {
+margin-bottom: 0 !important;
+}
+a:not([href]) {
+color: inherit;
+text-decoration: none;
+}
+.anchor {
+display: inline-block;
+padding-right: 2px;
+margin-left: -18px;
+}
+.anchor:focus {
+outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 1em;
+margin-bottom: 16px;
+font-weight: bold;
+line-height: 1.4;
+}
+h1 .octicon-link,
+h2 .octicon-link,
+h3 .octicon-link,
+h4 .octicon-link,
+h5 .octicon-link,
+h6 .octicon-link {
+color: #000;
+vertical-align: middle;
+visibility: hidden;
+}
+h1:hover .anchor,
+h2:hover .anchor,
+h3:hover .anchor,
+h4:hover .anchor,
+h5:hover .anchor,
+h6:hover .anchor {
+text-decoration: none;
+}
+h1:hover .anchor .octicon-link,
+h2:hover .anchor .octicon-link,
+h3:hover .anchor .octicon-link,
+h4:hover .anchor .octicon-link,
+h5:hover .anchor .octicon-link,
+h6:hover .anchor .octicon-link {
+visibility: visible;
+}
+h1 {
+padding-bottom: 0.3em;
+font-size: 2.25em;
+line-height: 1.2;
+border-bottom: 1px solid #eee;
+}
+h1 .anchor {
+line-height: 1;
+}
+h2 {
+padding-bottom: 0.3em;
+font-size: 1.75em;
+line-height: 1.225;
+border-bottom: 1px solid #eee;
+}
+h2 .anchor {
+line-height: 1;
+}
+h3 {
+font-size: 1.5em;
+line-height: 1.43;
+}
+h3 .anchor {
+line-height: 1.2;
+}
+h4 {
+font-size: 1.25em;
+}
+h4 .anchor {
+line-height: 1.2;
+}
+h5 {
+font-size: 1em;
+}
+h5 .anchor {
+line-height: 1.1;
+}
+h6 {
+font-size: 1em;
+color: #777;
+}
+h6 .anchor {
+line-height: 1.1;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table,
+pre {
+margin-top: 0;
+margin-bottom: 16px;
+}
+hr {
+height: 4px;
+padding: 0;
+margin: 16px 0;
+background-color: #e7e7e7;
+border: 0 none;
+}
+ul,
+ol {
+padding-left: 2em;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+margin-top: 0;
+margin-bottom: 0;
+}
+li>p {
+margin-top: 16px;
+}
+dl {
+padding: 0;
+}
+dl dt {
+padding: 0;
+margin-top: 16px;
+font-size: 1em;
+font-style: italic;
+font-weight: bold;
+}
+dl dd {
+padding: 0 16px;
+margin-bottom: 16px;
+}
+blockquote {
+padding: 0 15px;
+color: #777;
+border-left: 4px solid #ddd;
+}
+blockquote>:first-child {
+margin-top: 0;
+}
+blockquote>:last-child {
+margin-bottom: 0;
+}
+table {
+display: block;
+width: 100%;
+overflow: auto;
+word-break: normal;
+word-break: keep-all;
+}
+table th {
+font-weight: bold;
+}
+table th,
+table td {
+padding: 6px 13px;
+border: 1px solid #ddd;
+}
+table tr {
+background-color: #fff;
+border-top: 1px solid #ccc;
+}
+table tr:nth-child(2n) {
+background-color: #f8f8f8;
+}
+img {
+max-width: 100%;
+box-sizing: content-box;
+background-color: #fff;
+}
+code {
+padding: 0;
+padding-top: 0.2em;
+padding-bottom: 0.2em;
+margin: 0;
+font-size: 85%;
+background-color: rgba(0,0,0,0.04);
+border-radius: 3px;
+}
+code:before,
+code:after {
+letter-spacing: -0.2em;
+content: "\00a0";
+}
+pre>code {
+padding: 0;
+margin: 0;
+font-size: 100%;
+word-break: normal;
+white-space: pre;
+background: transparent;
+border: 0;
+}
+.highlight {
+margin-bottom: 16px;
+}
+.highlight pre,
+pre {
+padding: 16px;
+overflow: auto;
+font-size: 85%;
+line-height: 1.45;
+background-color: #f7f7f7;
+border-radius: 3px;
+}
+.highlight pre {
+margin-bottom: 0;
+word-break: normal;
+}
+pre {
+word-wrap: normal;
+}
+pre code {
+display: inline;
+max-width: initial;
+padding: 0;
+margin: 0;
+overflow: initial;
+line-height: inherit;
+word-wrap: normal;
+background-color: transparent;
+border: 0;
+}
+pre code:before,
+pre code:after {
+content: normal;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font-size: 11px;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.pl-c {
+color: #969896;
+}
+.pl-c1,
+.pl-s .pl-v {
+color: #0086b3;
+}
+.pl-e,
+.pl-en {
+color: #795da3;
+}
+.pl-s .pl-s1,
+.pl-smi {
+color: #333;
+}
+.pl-ent {
+color: #63a35c;
+}
+.pl-k {
+color: #a71d5d;
+}
+.pl-pds,
+.pl-s,
+.pl-s .pl-pse .pl-s1,
+.pl-sr,
+.pl-sr .pl-cce,
+.pl-sr .pl-sra,
+.pl-sr .pl-sre {
+color: #183691;
+}
+.pl-v {
+color: #ed6a43;
+}
+.pl-id {
+color: #b52a1d;
+}
+.pl-ii {
+background-color: #b52a1d;
+color: #f8f8f8;
+}
+.pl-sr .pl-cce {
+color: #63a35c;
+font-weight: bold;
+}
+.pl-ml {
+color: #693a17;
+}
+.pl-mh,
+.pl-mh .pl-en,
+.pl-ms {
+color: #1d3e81;
+font-weight: bold;
+}
+.pl-mq {
+color: #008080;
+}
+.pl-mi {
+color: #333;
+font-style: italic;
+}
+.pl-mb {
+color: #333;
+font-weight: bold;
+}
+.pl-md {
+background-color: #ffecec;
+color: #bd2c00;
+}
+.pl-mi1 {
+background-color: #eaffea;
+color: #55a532;
+}
+.pl-mdr {
+color: #795da3;
+font-weight: bold;
+}
+.pl-mo {
+color: #1d3e81;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.task-list-item {
+list-style-type: none;
+}
+.task-list-item+.task-list-item {
+margin-top: 3px;
+}
+.task-list-item input {
+margin: 0 0.35em 0.25em -1.6em;
+vertical-align: middle;
+}
+:checked+.radio-label {
+z-index: 1;
+position: relative;
+border-color: #4078c0;
+}
+.sourceLine {
+display: inline-block;
+}
+code .kw { color: #000000; }
+code .dt { color: #ed6a43; }
+code .dv { color: #009999; }
+code .bn { color: #009999; }
+code .fl { color: #009999; }
+code .ch { color: #009999; }
+code .st { color: #183691; }
+code .co { color: #969896; }
+code .ot { color: #0086b3; }
+code .al { color: #a61717; }
+code .fu { color: #63a35c; }
+code .er { color: #a61717; background-color: #e3d2d2; }
+code .wa { color: #000000; }
+code .cn { color: #008080; }
+code .sc { color: #008080; }
+code .vs { color: #183691; }
+code .ss { color: #183691; }
+code .im { color: #000000; }
+code .va {color: #008080; }
+code .cf { color: #000000; }
+code .op { color: #000000; }
+code .bu { color: #000000; }
+code .ex { color: #000000; }
+code .pp { color: #999999; }
+code .at { color: #008080; }
+code .do { color: #969896; }
+code .an { color: #008080; }
+code .cv { color: #008080; }
+code .in { color: #008080; }
+</style>
+<style>
+body {
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 45px;
+  padding-top: 0px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1 id="filled-pause-perspective-taking-study-barr--seyfeddinipur-2010">Filled Pause Perspective-Taking Study (Barr &amp; Seyfeddinipur, 2010)</h1>
+<h1 id="description">Description</h1>
+<p>This repository contains data files, stimulus materials, and scripts associated with the following psycholinguistic study.</p>
+<p>Barr, D. J., &amp; Seyfeddinipur, M. (2010). <a href="https://doi.org/10.1080/01690960903047122">The role of fillers in listener attributions for speaker disfluency.</a> <em>Language and Cognitive Processes</em>, <em>25</em>, 441–455.</p>
+<ul>
+<li><code>data_raw/</code> : raw data files in CSV format</li>
+<li><code>stimuli/</code> : stimulus files (Windows BMP image files and WAV audio files)</li>
+</ul>
+<h1 id="codebook-for-files-in-data_raw">Codebook for files in <code>data_raw/</code></h1>
+<p>This section provides <a href="https://www.r-project.org">R code</a> for importing the raw data files as well as descriptions of the fields within each resulting table. To use the code, load the <a href="https://tidyverse.org">tidyverse</a> package for R.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">library</span>(<span class="st">&quot;tidyverse&quot;</span>)</a></code></pre></div>
+<h2 id="files-related-to-study-design">Files related to study design</h2>
+<h3 id="areas_of_interestcsv"><code>areas_of_interest.csv</code></h3>
+<p>Contains the coordinates for the two screen regions (areas of interest, or AOIs) where pictures were displayed. Each picture was a 400x400 bitmap image, displayed on a computer screen with a 1024x768 resolution.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1">aoi &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="kw">file.path</span>(<span class="st">&quot;data_raw&quot;</span>, <span class="st">&quot;areas_of_interest.csv&quot;</span>),</a>
+<a class="sourceLine" id="cb2-2" title="2">                <span class="dt">col_types =</span> <span class="st">&quot;ciiii&quot;</span>)</a></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">field</th>
+<th align="left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">AOI</td>
+<td align="left">name of area of interest (left or right)</td>
+</tr>
+<tr class="even">
+<td align="left">x1</td>
+<td align="left">upper left X coordinate of image in pixels</td>
+</tr>
+<tr class="odd">
+<td align="left">y1</td>
+<td align="left">upper left Y coordinate of image in pixels</td>
+</tr>
+<tr class="even">
+<td align="left">x2</td>
+<td align="left">bottom right X coordinate of image in pixels</td>
+</tr>
+<tr class="odd">
+<td align="left">y2</td>
+<td align="left">bottom right Y coordinate of image in pixels</td>
+</tr>
+</tbody>
+</table>
+<h3 id="block_imagescsv"><code>block_images.csv</code></h3>
+<p>Information about what images go with which blocks. Each block had three images, labelled A, B, C in the manuscript (see Barr &amp; Seyfeddinipur, 2010, pp. 445–446).</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">block_images &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="kw">file.path</span>(<span class="st">&quot;data_raw&quot;</span>, <span class="st">&quot;block_images.csv&quot;</span>),</a>
+<a class="sourceLine" id="cb3-2" title="2">                         <span class="dt">col_types =</span> <span class="st">&quot;iic&quot;</span>)</a></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">field</th>
+<th align="left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">block</td>
+<td align="left">unique integer identifying blocks</td>
+</tr>
+<tr class="even">
+<td align="left">image</td>
+<td align="left">bitmap image number (e.g., 52 = 52.bmp)</td>
+</tr>
+<tr class="odd">
+<td align="left">imgrole</td>
+<td align="left">role the image plays (A, B, C)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="blockscsv"><code>blocks.csv</code></h3>
+<p>There were four versions of the stimulus materials created for counterbalancing purposes. This file has information about what condition each block was presented in across the four versions.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1">blocks &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="kw">file.path</span>(<span class="st">&quot;data_raw&quot;</span>, <span class="st">&quot;blocks.csv&quot;</span>),</a>
+<a class="sourceLine" id="cb4-2" title="2">                   <span class="dt">col_types =</span> <span class="st">&quot;iicccccc&quot;</span>)</a></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">field</th>
+<th align="left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">vers</td>
+<td align="left">which version of the stimuli (1-4)</td>
+</tr>
+<tr class="even">
+<td align="left">block</td>
+<td align="left">unique integer identifying blocks</td>
+</tr>
+<tr class="odd">
+<td align="left">blocktype</td>
+<td align="left">whether the block was critical or noncritical</td>
+</tr>
+<tr class="even">
+<td align="left">trainspkr</td>
+<td align="left">who the speaker was during training</td>
+</tr>
+<tr class="odd">
+<td align="left">testspkr</td>
+<td align="left">who the speaker was at test</td>
+</tr>
+<tr class="even">
+<td align="left">spkr</td>
+<td align="left">what speaker condition the block was in (same, diff)</td>
+</tr>
+<tr class="odd">
+<td align="left">pause</td>
+<td align="left">what pause condition the block was in (filled, baseline)</td>
+</tr>
+<tr class="even">
+<td align="left">soundfile</td>
+<td align="left">soundfile that played at test</td>
+</tr>
+</tbody>
+</table>
+<h3 id="versionscsv"><code>versions.csv</code></h3>
+<p>Trial-by-trial information about training and test trials for each block and each version of the stimulus materials.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1">versions &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="kw">file.path</span>(<span class="st">&quot;data_raw&quot;</span>, <span class="st">&quot;versions.csv&quot;</span>),</a>
+<a class="sourceLine" id="cb5-2" title="2">                     <span class="dt">col_types =</span> <span class="st">&quot;iiiiiicci&quot;</span>)</a></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">field</th>
+<th align="left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">vers</td>
+<td align="left">which version of stimulus materials (1, 2, 3, or 4)</td>
+</tr>
+<tr class="even">
+<td align="left">block</td>
+<td align="left">unique integer identifying each block</td>
+</tr>
+<tr class="odd">
+<td align="left">blocktrial</td>
+<td align="left">integer identifying presentation order within the block</td>
+</tr>
+<tr class="even">
+<td align="left">left</td>
+<td align="left">image number in the left area of interest (e.g., 32 means 32.BMP)</td>
+</tr>
+<tr class="odd">
+<td align="left">right</td>
+<td align="left">image number in the right area of interest</td>
+</tr>
+<tr class="even">
+<td align="left">target</td>
+<td align="left">position of the target (0 = left, 1 = right)</td>
+</tr>
+<tr class="odd">
+<td align="left">soundfile</td>
+<td align="left">name of the wave file (e.g., 4 = 4.wav, 6umE = 6umE.wav)</td>
+</tr>
+<tr class="even">
+<td align="left">who</td>
+<td align="left">identify of the speaker</td>
+</tr>
+<tr class="odd">
+<td align="left">showspeaker</td>
+<td align="left">display speaker identity before trial (0 = no, 1 = yes)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="files-related-to-subject-data">Files related to subject data</h2>
+<h3 id="subjectscsv"><code>subjects.csv</code></h3>
+<p>Information about each subject in the experiment.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1">subjects &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="kw">file.path</span>(<span class="st">&quot;data_raw&quot;</span>, <span class="st">&quot;subjects.csv&quot;</span>),</a>
+<a class="sourceLine" id="cb6-2" title="2">                     <span class="dt">col_types =</span> <span class="st">&quot;ici&quot;</span>)</a></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">field</th>
+<th align="left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">SubjID</td>
+<td align="left">unique integer identifying each subject</td>
+</tr>
+<tr class="even">
+<td align="left">Gender</td>
+<td align="left">gender of the subject</td>
+</tr>
+<tr class="odd">
+<td align="left">vers</td>
+<td align="left">which version of the materials the subject received</td>
+</tr>
+</tbody>
+</table>
+<h3 id="trialscsv"><code>trials.csv</code></h3>
+<p>Information about each trial in the experiment.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1">trials &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="kw">file.path</span>(<span class="st">&quot;data_raw&quot;</span>, <span class="st">&quot;trials.csv&quot;</span>),</a>
+<a class="sourceLine" id="cb7-2" title="2">                   <span class="dt">col_types =</span> <span class="st">&quot;iiiiiii&quot;</span>)</a></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">field</th>
+<th align="left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">TrialID</td>
+<td align="left">integer uniquely identifying each collected trial</td>
+</tr>
+<tr class="even">
+<td align="left">SubjID</td>
+<td align="left">integer uniquely identifying each subject</td>
+</tr>
+<tr class="odd">
+<td align="left">block</td>
+<td align="left">block number</td>
+</tr>
+<tr class="even">
+<td align="left">btrial</td>
+<td align="left">trial number within the block</td>
+</tr>
+<tr class="odd">
+<td align="left">tord</td>
+<td align="left">trial order</td>
+</tr>
+<tr class="even">
+<td align="left">RT</td>
+<td align="left">response time in ms (from start of audio playback)</td>
+</tr>
+<tr class="odd">
+<td align="left">Selection</td>
+<td align="left">which image was selected (0 = left, 1 = right)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mousecsv"><code>mouse.csv</code></h3>
+<p>Information about the position of the mouse cursor on each trial on a display with 1024x768 resolution.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1">mouse &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="kw">file.path</span>(<span class="st">&quot;data_raw&quot;</span>, <span class="st">&quot;mouse.csv&quot;</span>),</a>
+<a class="sourceLine" id="cb8-2" title="2">                  <span class="dt">col_types =</span> <span class="st">&quot;iiii&quot;</span>)</a></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">field</th>
+<th align="left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">TrialID</td>
+<td align="left">integer uniquely identifying each collected trial</td>
+</tr>
+<tr class="even">
+<td align="left">Msec</td>
+<td align="left">milliseconds from onset of soundfile</td>
+</tr>
+<tr class="odd">
+<td align="left">X</td>
+<td align="left">horizontal position of mouse cursor</td>
+</tr>
+<tr class="even">
+<td align="left">Y</td>
+<td align="left">vertical position of mouse cursor</td>
+</tr>
+</tbody>
+</table>
+<h1 id="scripts">Scripts</h1>
+<h2 id="data-import-and-pre-processing">Data import and pre-processing</h2>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1"><span class="kw">library</span>(<span class="st">&quot;lme4&quot;</span>)</a>
+<a class="sourceLine" id="cb9-2" title="2"><span class="kw">library</span>(<span class="st">&quot;tidyverse&quot;</span>)</a>
+<a class="sourceLine" id="cb9-3" title="3"></a>
+<a class="sourceLine" id="cb9-4" title="4"><span class="co">## import the data</span></a>
+<a class="sourceLine" id="cb9-5" title="5">subjects &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="kw">file.path</span>(<span class="st">&quot;data_raw&quot;</span>, <span class="st">&quot;subjects.csv&quot;</span>),</a>
+<a class="sourceLine" id="cb9-6" title="6">                     <span class="dt">col_types =</span> <span class="st">&quot;ici&quot;</span>)</a>
+<a class="sourceLine" id="cb9-7" title="7"></a>
+<a class="sourceLine" id="cb9-8" title="8">blocks &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="kw">file.path</span>(<span class="st">&quot;data_raw&quot;</span>, <span class="st">&quot;blocks.csv&quot;</span>),</a>
+<a class="sourceLine" id="cb9-9" title="9">                   <span class="dt">col_types =</span> <span class="st">&quot;iicccccc&quot;</span>)</a>
+<a class="sourceLine" id="cb9-10" title="10"></a>
+<a class="sourceLine" id="cb9-11" title="11">versions &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="kw">file.path</span>(<span class="st">&quot;data_raw&quot;</span>, <span class="st">&quot;versions.csv&quot;</span>),</a>
+<a class="sourceLine" id="cb9-12" title="12">                     <span class="dt">col_types =</span> <span class="st">&quot;iiiiiicci&quot;</span>)</a>
+<a class="sourceLine" id="cb9-13" title="13"></a>
+<a class="sourceLine" id="cb9-14" title="14">trials &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="kw">file.path</span>(<span class="st">&quot;data_raw&quot;</span>, <span class="st">&quot;trials.csv&quot;</span>),</a>
+<a class="sourceLine" id="cb9-15" title="15">                   <span class="dt">col_types =</span> <span class="st">&quot;iiiiiii&quot;</span>)</a>
+<a class="sourceLine" id="cb9-16" title="16"></a>
+<a class="sourceLine" id="cb9-17" title="17">mouse &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="kw">file.path</span>(<span class="st">&quot;data_raw&quot;</span>, <span class="st">&quot;mouse.csv&quot;</span>),</a>
+<a class="sourceLine" id="cb9-18" title="18">                  <span class="dt">col_types =</span> <span class="st">&quot;iiii&quot;</span>)</a>
+<a class="sourceLine" id="cb9-19" title="19"></a>
+<a class="sourceLine" id="cb9-20" title="20"><span class="co">## audiotimings:</span></a>
+<a class="sourceLine" id="cb9-21" title="21"><span class="co">##   onset of filler/noise: 3056 ms</span></a>
+<a class="sourceLine" id="cb9-22" title="22"><span class="co">##   onset of noun phrase:  4871 ms</span></a>
+<a class="sourceLine" id="cb9-23" title="23">fponset &lt;-<span class="st"> </span>3056L</a>
+<a class="sourceLine" id="cb9-24" title="24">nponset &lt;-<span class="st"> </span>4871L</a>
+<a class="sourceLine" id="cb9-25" title="25"></a>
+<a class="sourceLine" id="cb9-26" title="26"><span class="co">## keep only the test trials</span></a>
+<a class="sourceLine" id="cb9-27" title="27">crit &lt;-<span class="st"> </span>trials <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-28" title="28"><span class="st">  </span><span class="kw">filter</span>(btrial <span class="op">==</span><span class="st"> </span>5L) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-29" title="29"><span class="st">  </span><span class="kw">inner_join</span>(subjects <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="op">-</span>Gender), <span class="st">&quot;SubjID&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-30" title="30"><span class="st">  </span><span class="kw">semi_join</span>(blocks <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(blocktype <span class="op">==</span><span class="st"> &quot;critical&quot;</span>), <span class="kw">c</span>(<span class="st">&quot;vers&quot;</span>, <span class="st">&quot;block&quot;</span>)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-31" title="31"><span class="st">  </span><span class="kw">inner_join</span>(versions <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(vers, block, btrial, target),</a>
+<a class="sourceLine" id="cb9-32" title="32">             <span class="kw">c</span>(<span class="st">&quot;vers&quot;</span>, <span class="st">&quot;block&quot;</span>, <span class="st">&quot;btrial&quot;</span>)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-33" title="33"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">fac =</span> (target <span class="op">*</span><span class="st"> </span>2L) <span class="op">-</span><span class="st"> </span>1L,</a>
+<a class="sourceLine" id="cb9-34" title="34">         <span class="dt">accurate =</span> Selection <span class="op">==</span><span class="st"> </span>target) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-35" title="35"><span class="st">  </span><span class="kw">filter</span>(accurate)</a>
+<a class="sourceLine" id="cb9-36" title="36"></a>
+<a class="sourceLine" id="cb9-37" title="37"><span class="co">## time-lock and calculate distance of cursor from target</span></a>
+<a class="sourceLine" id="cb9-38" title="38">mousedist &lt;-<span class="st"> </span>mouse <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-39" title="39"><span class="st">  </span><span class="kw">inner_join</span>(crit <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(TrialID, fac), <span class="st">&quot;TrialID&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-40" title="40"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">ms =</span> Msec <span class="op">-</span><span class="st"> </span>fponset,</a>
+<a class="sourceLine" id="cb9-41" title="41">         <span class="dt">sdist =</span> fac <span class="op">*</span><span class="st"> </span>(X <span class="op">-</span><span class="st"> </span><span class="dv">512</span>) <span class="op">/</span><span class="st"> </span>100L,</a>
+<a class="sourceLine" id="cb9-42" title="42">         <span class="dt">x =</span> <span class="kw">if_else</span>(<span class="kw">abs</span>(sdist) <span class="op">&gt;</span><span class="st"> </span><span class="dv">1</span>, <span class="dv">1</span> <span class="op">*</span><span class="st"> </span><span class="kw">sign</span>(sdist), sdist),</a>
+<a class="sourceLine" id="cb9-43" title="43">         <span class="dt">win =</span> <span class="kw">factor</span>(<span class="kw">if_else</span>(ms <span class="op">&gt;=</span><span class="st"> </span>(nponset <span class="op">-</span><span class="st"> </span>fponset),</a>
+<a class="sourceLine" id="cb9-44" title="44">                              <span class="st">&quot;expression&quot;</span>, <span class="st">&quot;filled interval&quot;</span>),</a>
+<a class="sourceLine" id="cb9-45" title="45">                      <span class="dt">levels =</span> <span class="kw">c</span>(<span class="st">&quot;filled interval&quot;</span>, <span class="st">&quot;expression&quot;</span>))) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-46" title="46"><span class="st">  </span><span class="kw">filter</span>(ms <span class="op">&gt;=</span><span class="st"> </span>0L, ms <span class="op">&lt;=</span><span class="st"> </span>4471L) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-47" title="47"><span class="st">  </span><span class="kw">select</span>(TrialID, win, ms, x)</a>
+<a class="sourceLine" id="cb9-48" title="48"></a>
+<a class="sourceLine" id="cb9-49" title="49"><span class="co">## calculate distance travelled during window</span></a>
+<a class="sourceLine" id="cb9-50" title="50"><span class="co">## and match up with block info</span></a>
+<a class="sourceLine" id="cb9-51" title="51">dist &lt;-<span class="st"> </span>mousedist <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-52" title="52"><span class="st">  </span><span class="kw">group_by</span>(TrialID, win) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-53" title="53"><span class="st">  </span><span class="kw">filter</span>( (ms <span class="op">==</span><span class="st"> </span><span class="kw">min</span>(ms)) <span class="op">|</span><span class="st"> </span>(ms <span class="op">==</span><span class="st"> </span><span class="kw">max</span>(ms)) ) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-54" title="54"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">step =</span> <span class="kw">paste0</span>(<span class="st">&quot;S&quot;</span>, <span class="kw">row_number</span>())) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-55" title="55"><span class="st">  </span><span class="kw">select</span>(<span class="op">-</span>ms) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-56" title="56"><span class="st">  </span><span class="kw">pivot_wider</span>(<span class="dt">names_from =</span> step, <span class="dt">values_from =</span> x) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-57" title="57"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">dist =</span> S2 <span class="op">-</span><span class="st"> </span>S1) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-58" title="58"><span class="st">  </span><span class="kw">ungroup</span>() <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-59" title="59"><span class="st">  </span><span class="kw">inner_join</span>(crit <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(SubjID, TrialID, vers, block), <span class="kw">c</span>(<span class="st">&quot;TrialID&quot;</span>)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-60" title="60"><span class="st">  </span><span class="kw">inner_join</span>(blocks <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(vers, block, spkr, pause),</a>
+<a class="sourceLine" id="cb9-61" title="61">             <span class="kw">c</span>(<span class="st">&quot;vers&quot;</span>, <span class="st">&quot;block&quot;</span>)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-62" title="62"><span class="st">  </span><span class="kw">select</span>(SubjID, block, win, spkr, pause, dist)</a></code></pre></div>
+<h2 id="calculate-means">Calculate means</h2>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1">descriptives &lt;-<span class="st"> </span>dist <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb10-2" title="2"><span class="st">  </span><span class="kw">group_by</span>(win, spkr, pause) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb10-3" title="3"><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">mean_dist =</span> <span class="kw">mean</span>(dist),</a>
+<a class="sourceLine" id="cb10-4" title="4">            <span class="dt">sd_dist =</span> <span class="kw">sd</span>(dist))</a></code></pre></div>
+<pre><code>## `summarise()` regrouping output by &#39;win&#39;, &#39;spkr&#39; (override with `.groups` argument)
+</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">win</th>
+<th align="left">spkr</th>
+<th align="left">pause</th>
+<th align="right">mean_dist</th>
+<th align="right">sd_dist</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">filled interval</td>
+<td align="left">diff</td>
+<td align="left">baseline</td>
+<td align="right">0.04</td>
+<td align="right">0.28</td>
+</tr>
+<tr class="even">
+<td align="left">filled interval</td>
+<td align="left">diff</td>
+<td align="left">filled</td>
+<td align="right">-0.01</td>
+<td align="right">0.33</td>
+</tr>
+<tr class="odd">
+<td align="left">filled interval</td>
+<td align="left">same</td>
+<td align="left">baseline</td>
+<td align="right">0.00</td>
+<td align="right">0.30</td>
+</tr>
+<tr class="even">
+<td align="left">filled interval</td>
+<td align="left">same</td>
+<td align="left">filled</td>
+<td align="right">0.10</td>
+<td align="right">0.41</td>
+</tr>
+<tr class="odd">
+<td align="left">expression</td>
+<td align="left">diff</td>
+<td align="left">baseline</td>
+<td align="right">0.60</td>
+<td align="right">0.61</td>
+</tr>
+<tr class="even">
+<td align="left">expression</td>
+<td align="left">diff</td>
+<td align="left">filled</td>
+<td align="right">0.60</td>
+<td align="right">0.71</td>
+</tr>
+<tr class="odd">
+<td align="left">expression</td>
+<td align="left">same</td>
+<td align="left">baseline</td>
+<td align="right">0.70</td>
+<td align="right">0.56</td>
+</tr>
+<tr class="even">
+<td align="left">expression</td>
+<td align="left">same</td>
+<td align="left">filled</td>
+<td align="right">0.69</td>
+<td align="right">0.57</td>
+</tr>
+</tbody>
+</table>
+<h2 id="linear-mixed-effects-model">Linear Mixed-Effects Model</h2>
+<h3 id="filled-interval">Filled interval</h3>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1">dat &lt;-<span class="st"> </span>dist <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb12-2" title="2"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">P =</span> <span class="kw">if_else</span>(pause <span class="op">==</span><span class="st"> &quot;baseline&quot;</span>, <span class="fl">-.5</span>, <span class="fl">.5</span>),</a>
+<a class="sourceLine" id="cb12-3" title="3">         <span class="dt">S =</span> <span class="kw">if_else</span>(spkr <span class="op">==</span><span class="st"> &quot;diff&quot;</span>, <span class="fl">-.5</span>, <span class="fl">.5</span>))</a>
+<a class="sourceLine" id="cb12-4" title="4"></a>
+<a class="sourceLine" id="cb12-5" title="5">mod_fi &lt;-<span class="st"> </span><span class="kw">lmer</span>(dist <span class="op">~</span><span class="st"> </span>S <span class="op">*</span><span class="st"> </span>P <span class="op">+</span></a>
+<a class="sourceLine" id="cb12-6" title="6"><span class="st">                 </span>(S <span class="op">*</span><span class="st"> </span>P <span class="op">||</span><span class="st"> </span>SubjID) <span class="op">+</span></a>
+<a class="sourceLine" id="cb12-7" title="7"><span class="st">                 </span>(S <span class="op">*</span><span class="st"> </span>P <span class="op">||</span><span class="st"> </span>block),</a>
+<a class="sourceLine" id="cb12-8" title="8">               <span class="dt">data =</span> dat <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(win <span class="op">==</span><span class="st"> &quot;filled interval&quot;</span>))</a></code></pre></div>
+<pre><code>## boundary (singular) fit: see ?isSingular
+</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" title="1"><span class="kw">summary</span>(mod_fi)</a></code></pre></div>
+<pre><code>## Linear mixed model fit by REML [&#39;lmerMod&#39;]
+## Formula: dist ~ S * P + ((1 | SubjID) + (0 + S | SubjID) + (0 + P | SubjID) +  
+##     (0 + S:P | SubjID)) + ((1 | block) + (0 + S | block) + (0 +  
+##     P | block) + (0 + S:P | block))
+##    Data: dat %&gt;% filter(win == &quot;filled interval&quot;)
+## 
+## REML criterion at convergence: 679.2
+## 
+## Scaled residuals: 
+##     Min      1Q  Median      3Q     Max 
+## -5.6347 -0.2451 -0.0427  0.0870  5.6437 
+## 
+## Random effects:
+##  Groups   Name        Variance  Std.Dev.
+##  SubjID   (Intercept) 0.0059464 0.07711 
+##  SubjID.1 S           0.0253838 0.15932 
+##  SubjID.2 P           0.0003054 0.01747 
+##  SubjID.3 S:P         0.0156026 0.12491 
+##  block    (Intercept) 0.0000000 0.00000 
+##  block.1  S           0.0003783 0.01945 
+##  block.2  P           0.0000000 0.00000 
+##  block.3  S:P         0.0004942 0.02223 
+##  Residual             0.0973285 0.31198 
+## Number of obs: 1075, groups:  SubjID, 92; block, 12
+## 
+## Fixed effects:
+##             Estimate Std. Error t value
+## (Intercept)  0.03367    0.01247   2.700
+## S            0.03134    0.02590   1.210
+## P            0.02969    0.01914   1.551
+## S:P          0.15745    0.04079   3.860
+## 
+## Correlation of Fixed Effects:
+##     (Intr) S      P     
+## S   -0.010              
+## P    0.005 -0.002       
+## S:P -0.002  0.005 -0.016
+## convergence code: 0
+## boundary (singular) fit: see ?isSingular
+</code></pre>
+<h3 id="referential-expression">Referential expression</h3>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" title="1">mod_re &lt;-<span class="st"> </span><span class="kw">lmer</span>(dist <span class="op">~</span><span class="st"> </span>S <span class="op">*</span><span class="st"> </span>P <span class="op">+</span></a>
+<a class="sourceLine" id="cb16-2" title="2"><span class="st">                 </span>(S <span class="op">*</span><span class="st"> </span>P <span class="op">||</span><span class="st"> </span>SubjID) <span class="op">+</span></a>
+<a class="sourceLine" id="cb16-3" title="3"><span class="st">                 </span>(S <span class="op">*</span><span class="st"> </span>P <span class="op">||</span><span class="st"> </span>block),</a>
+<a class="sourceLine" id="cb16-4" title="4">               <span class="dt">data =</span> dat <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(win <span class="op">==</span><span class="st"> &quot;expression&quot;</span>))</a></code></pre></div>
+<pre><code>## boundary (singular) fit: see ?isSingular
+</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" title="1"><span class="kw">summary</span>(mod_re)</a></code></pre></div>
+<pre><code>## Linear mixed model fit by REML [&#39;lmerMod&#39;]
+## Formula: dist ~ S * P + ((1 | SubjID) + (0 + S | SubjID) + (0 + P | SubjID) +  
+##     (0 + S:P | SubjID)) + ((1 | block) + (0 + S | block) + (0 +  
+##     P | block) + (0 + S:P | block))
+##    Data: dat %&gt;% filter(win == &quot;expression&quot;)
+## 
+## REML criterion at convergence: 1859.6
+## 
+## Scaled residuals: 
+##     Min      1Q  Median      3Q     Max 
+## -3.5291 -0.6780  0.1039  0.5550  2.8348 
+## 
+## Random effects:
+##  Groups   Name        Variance  Std.Dev. 
+##  SubjID   (Intercept) 2.395e-02 1.548e-01
+##  SubjID.1 S           4.163e-02 2.040e-01
+##  SubjID.2 P           1.033e-09 3.215e-05
+##  SubjID.3 S:P         1.200e-03 3.464e-02
+##  block    (Intercept) 5.484e-02 2.342e-01
+##  block.1  S           1.587e-02 1.260e-01
+##  block.2  P           2.149e-03 4.636e-02
+##  block.3  S:P         0.000e+00 0.000e+00
+##  Residual             2.891e-01 5.377e-01
+## Number of obs: 1070, groups:  SubjID, 92; block, 12
+## 
+## Fixed effects:
+##              Estimate Std. Error t value
+## (Intercept)  0.640076   0.071435   8.960
+## S            0.101991   0.053504   1.906
+## P           -0.008024   0.035552  -0.226
+## S:P         -0.012548   0.065966  -0.190
+## 
+## Correlation of Fixed Effects:
+##     (Intr) S      P     
+## S   -0.002              
+## P    0.003 -0.001       
+## S:P  0.000  0.007 -0.012
+## convergence code: 0
+## boundary (singular) fit: see ?isSingular
+</code></pre>
+
+</body>
+</html>
